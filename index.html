@@ -62,6 +62,9 @@ blockquote p {
   text-align: left;
 }
 
+.aligned_images div{
+  display: inline-block;
+}
 </style>
 
 
@@ -70,13 +73,58 @@ blockquote p {
 </section>
 <section style="text-align:center; padding:5em 9em;">
     <h3 style="font-size:140%;">Servei Meteorològic de Catalunya</h3>
+    <img src="img/logo_smc.png"/>
 </section>
-
+<section style="text-align:center; padding:3em 6em;">
+    <h3>Fuentes de datos</h3>
+    <ul style="text-align: left">
+      <li>Estaciones meteorológicas automáticas/observadores</li>
+      <li>Descargas eléctricas</li>
+      <li>Radar meteorológico</li>
+      <li>Imágenes de satélite</li>
+      <li>Modelos de predicción numérica</li>
+      <li>Productos derivados</li>
+    </ul>
+</section>
+<section style="text-align:center; padding:3em 6em;">
+  <h3>Modelos de predicción numérica</h3>
+  <ul>
+    <li>10 modelos (y hasta tres resoluciones)</li>
+    <li>Hasta 14 variables de interés</li>
+    <li>Hasta 5 niveles de presión de interés</li>
+    <li>Dos salidas al dia, hasta 72 momentos por salida</li>
+  </ul>
+  <h3>= Sobre 30.000 imágenes por día</h3>
+</section>
+<section style="text-align:center; padding:5em 9em;">
+    <h3>Opciones</h3>
+    <ul style="text-align: left">
+      <li>Renderizar a nivel de servidor
+        <ul><li>MapServer, GeoServer...</li></ul>
+      </li>
+      <li>Renderizar a nivel de cliente</li>
+      <ul><li>OpenLayers, Leaflet</li></ul>
+    </ul>
+</section>
+<section style="text-align:center; padding:2em;">
+    <h3>D3js: Datos vectoriales</h3>
+    <div class="aligned_images">
+      <div><img src="img/choro1.png" width="300px"/></div>
+      <div><img src="img/flags.png" width="300px"/></div>
+      <div><img src="img/cartogram.png" width="300px" height="200px"/></div>
+    </div>
+    <div class="aligned_images">
+      <div><img src="img/hexbin.jpg" width="300px"/></div>
+      <div><img src="img/points.gif" width="300px"/></div>
+      <div><img src="img/route.jpg" width="300px"/></div>
+    </div>
+</section>
+<section style="text-align:center; padding:5em 9em;">
+    <h3>Opciones</h3>
+</section>
 <script src="js/d3.v4.min.js"></script>
 <script src="js/stack.v2.js"></script>
-
 <script>
-
 var mystack = stack()
     .on("activate", activate)
     .on("deactivate", deactivate);
