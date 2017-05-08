@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<style>
+
+@import url(http://fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i);
+
+section {
+  background: #fff;
+  color: #000;
+  padding: 2em;
+  font-family: "PT Serif", Baskerville, Georgia;
+}
+
+.grey {
+  color: #777;
+}
+
+.green {
+  color: #89b889;
+}
+a:link,
+a:visited {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h3 {
+  color: #89b889;
+}
+
+mark {
+  color: #89b889;
+  background: none;
+}
+
+blockquote {
+  background: #eee;
+  border-left: 10px solid #89b889;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #89b889;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.example {
+  text-align: left;
+}
+
+</style>
+
+
+<section style="text-align:center; padding:5em 9em;">
+    <h3 style="font-size:140%;"><b>Datos raster meteorológicos con D3js</b></h3>
+</section>
+<section style="text-align:center; padding:5em 9em;">
+    <h3 style="font-size:140%;">Servei Meteorològic de Catalunya</h3>
+</section>
+
+<script src="js/d3.v4.min.js"></script>
+<script src="js/stack.v2.js"></script>
+
+<script>
+
+var mystack = stack()
+    .on("activate", activate)
+    .on("deactivate", deactivate);
+
+var section = d3.selectAll("section"),
+exampleOneIndex = 0;
+
+for(var i = 0; i < section['_groups'][0].length; i++){
+    if( section['_groups'][0].item(i).id == 'exampleOne')
+      exampleOneIndex = i;
+
+}
+
+
+function refollow() {
+  followAnchor.style("top", (followIndex + (1 - mystack.scrollRatio()) / 2 - d3.event.offset) * 100 + "%");
+}
+
+function activate(d, i) {
+  if (i === exampleOneIndex) {
+    //startExampleOne();
+  }
+}
+
+function deactivate(d, i) {
+  if (i === exampleOneIndex) {
+    //stopExampleOne();
+  }
+}
+
+</script>
