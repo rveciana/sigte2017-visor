@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+  <title>Visor de modelització</title>
+  <script src="model-viewer.js"></script>
+
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/jquery-ui.css">
+  <script src="bootstrap/jquery.min.js"></script>
+  <script src="bootstrap/jquery-ui.min.js"></script>
+  <script src="bootstrap/bootstrap.min.js"></script>
+  <style>
+  /*** BOOTSTRAP ***/
+  .activeSelection {
+    background: #bcefb1 !important;
+  }
+
+  .disabledButton {
+    color: #bbb !important;
+  }
+
+  .glyphicon-isobands:before {
+    content: "\07fb";
+  }
+  .glyphicon-isolines:before {
+    content: "\07fc";
+  }
+
+  .glyphicon {
+    vertical-align: top;
+  }
+
+  .dropdown-submenu {
+    position: relative;
+  }
+
+  .dropdown-submenu .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -1px;
+  }
+
+  /*** BOOTSTRAP ***/
+
+
+  #toolTip {
+    margin: 0;
+    padding: 10px;
+    width: 180px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(150, 150, 150, 0.55);
+    pointer-events: none;
+    border-radius:5px;
+
+  }
+
+  #statusArea > div
+  {
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  #statusArea
+  {
+      text-align: center;
+      background-color: #f6f6f6;
+  }
+
+  #dateArea:before {
+      content: "Data validesa: ";
+      font-weight: bold;
+  }
+
+  #layersArea:before {
+      font-weight: bold;
+      content: "Capes actives: ";
+  }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="meteo.cat" width="25px" src="img/logo.png">
+      </a>
+    </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown" id="backgroundSelect">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fons<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          </ul>
+        </li>
+        <li class="dropdown" id="dataSelect">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Models<span class="caret"></span></a>
+          <ul class="dropdown-menu" id="dataSelectUl">
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" id="fbButton" class="disabledButton"><span class="glyphicon glyphicon-fast-backward"></span></a>
+        </li>
+        <li>
+          <a href="#" id="playButton"><span class="glyphicon glyphicon-play"></span></a>
+        </li>
+        <li>
+          <a href="#" id="ffButton"><span class="glyphicon glyphicon-fast-forward"></span></a>
+        </li>
+        <li  class="dropdown" id="scalesSelect">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span><span class="caret"></span></a>
+          <ul class="dropdown-menu" id="scalesSelectUl">
+          </ul>
+        </li>
+        <li>
+          <a href="#" id="downloadButton"><span class="glyphicon glyphicon-cloud-download"></span></a>
+        </li>
+        <li>
+          <a href="#" id="calendar"><span class="glyphicon glyphicon-calendar"></span></a>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="viewer"></div>
+ <script src="ui.min.js"></script>
+</body>
+</html>

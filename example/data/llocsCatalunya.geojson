@@ -1,0 +1,74 @@
+{ "type": "FeatureCollection",
+    "features": [
+      { "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.17,
+                41.38
+            ]
+        },
+        "properties": {"name": "Barcelona"}
+        },
+        { "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  2.82,
+                  41.98
+              ]
+          },
+          "properties": {"name": "Girona"}
+          },
+        { "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  1.827,
+                  41.731
+              ]
+          },
+          "properties": {"name": "Manresa"}
+          },
+          { "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    1.245,
+                    41.119
+                ]
+            },
+            "properties": {"name": "Tarragona"}
+            },
+          { "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.627,
+                    41.618
+                ]
+            },
+            "properties": {"name": "Lleida"}
+            },
+          { "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.795,
+                    42.702
+                ]
+            },
+            "properties": {"name": "Vielha"}
+            },
+          { "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.52,
+                    40.814
+                ]
+            },
+            "properties": {"name": "Tortosa"}
+            }
+    ]
+}
